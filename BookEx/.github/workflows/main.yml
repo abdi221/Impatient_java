@@ -32,10 +32,10 @@ jobs:
 
       # Upload test reports
       - name: Upload Test Results
-        working-directory: Impatient_java/BookEx
         uses: actions/upload-artifact@v3
         with:
           name: Test Reports
           path: |
-            app/build/test-results/TEST-*.xml
-            app/build/test-results/test/TEST-*.xml
+            Impatient_java/BookEx/app/build/test-results/TEST-*.xml
+            Impatient_java/BookEx/app/build/test-results/test/TEST-*.xml
+
