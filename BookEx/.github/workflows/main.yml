@@ -20,12 +20,19 @@ jobs:
       - name: Set Gradle User Home
         run: echo "GRADLE_USER_HOME=$(pwd)/.gradle" >> $GITHUB_ENV
 
+      # Change directory to where `gradlew` is located
+      - name: Navigate to Gradle Wrapper Directory
+        working-directory: Impatient_java/BookEx
+        run: echo "Navigating to $(pwd)"
+
       # Run tests
       - name: Run Gradle Tests
+        working-directory: Impatient_java/BookEx
         run: ./gradlew test
 
       # Upload test reports
       - name: Upload Test Results
+        working-directory: Impatient_java/BookEx
         uses: actions/upload-artifact@v3
         with:
           name: Test Reports
