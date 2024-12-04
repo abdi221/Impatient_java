@@ -22,5 +22,12 @@ public class LargestNum {
     // }
 
     // This is what you should do instead:
+    int largNum = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    System.out.println("Using the conditional operator: Largest number is " + largNum);
+
+    int mathmax = (Math.max(a, Math.max(b, c)));
+    System.out.println("\nUsing Math.max function: Largest number is " + mathmax);
   }
+
+
 }
