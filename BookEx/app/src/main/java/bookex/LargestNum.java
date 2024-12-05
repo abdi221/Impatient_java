@@ -22,6 +22,7 @@ public class LargestNum {
     // }
 
     // This is what you should do instead:
+    // Comparing first if a is greater than b if true, compare if a greater than c, otherwise if b is greater than c 
     int largNum = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
     System.out.println("Using the conditional operator: Largest number is " + largNum);
 
